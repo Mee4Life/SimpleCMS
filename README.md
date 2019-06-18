@@ -17,3 +17,6 @@ the way to extract the project details is using map we can fetch an JSON array t
 
 
  check if the requested Project is in the source and retrieve the Project data if founded 
+
+
+## Project removed because its too hard to build CMS system with next after found and there too many limited of programming like packages we cant install the packages like fs and ... 
