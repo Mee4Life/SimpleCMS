@@ -3,29 +3,40 @@ import Layout from '../components/Layout.js'
 import dataSource from '../Data/Projects/projectsList.json'
 
 function Project(props) {
+
+    let requestedProject = props.router.query.link;
+
+    for (let i = 0; i < dataSource.length; i++) {
+        const record = dataSource[i];
+        if (requestedProject == record.project.link) {
+            return handelProject(record.project);
+        } 
+    }
+    return ProjectNotFound()
+
+}
+
+function handelProject(project) {
     return (
-    <Layout>
-    <h1>Projects List</h1>
-    <ul>
-      {props.projects.map(project => (
-        <li key={project.link}>
-            <a>{project.name}</a>
-        </li>
-      ))}
-    </ul>
-  </Layout>
+        <Layout>
+            <h1>{project.name}</h1>
+            <h3>{project.description}</h3>
+        </Layout>
     )
 }
 
-Project.getInitialProps = async function() {
-    const data = await dataSource;
-  
-    console.log(`Show data fetched. Count: ${data.length}`);
-  
-    return {
-      projects: data.map(entry => entry.project)
-    };
-  };
-  
+function ProjectNotFound() {
+    return (
+        // TODO :create 404 page not found Layout
+        <Layout>
+            <h1>404 PAGE NOT FOUND</h1>
+        </Layout>
+    )
+}
+
 
 export default withRouter(Project)
+
+/*TODO: - create project json file take the project link as name 
+        -  
+*/

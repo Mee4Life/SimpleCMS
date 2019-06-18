@@ -14,3 +14,6 @@ extract the data source:
 the way to extract the project details is using map we can fetch an JSON array too from an API in the initial method [more details](https://nextjs.org/learn/basics/fetching-data-for-pages/fetching-batman-shows)
 
 [more about fetching data](https://nextjs.org/docs/#fetching-data-and-component-lifecycle)
+
+
+ check if the requested Project is in the source and retrieve the Project data if founded 

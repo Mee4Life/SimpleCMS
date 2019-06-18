@@ -1,8 +1,16 @@
 [
     {
-        "project": {"link":"test1", "name":"test1 name"}
+        "project": {
+            "link": "test1",
+            "name": "test1 name",
+            "description": "some data about the project"
+        }
     },
     {
-        "project": {"link":"test2", "name":"test2 name"}
+        "project": {
+            "link": "test2",
+            "name": "test2 name",
+            "description": "some data about the project"
+        }
     }
 ]
