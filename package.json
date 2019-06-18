@@ -1,0 +1,29 @@
+{
+  "name": "SimpleCMS",
+  "version": "1.0.0",
+  "description": "In this Project we will learn how to create an Next JS Application that will create a Web Page for each Project we will create on Git as the beginning the Data source will be Markdown Files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+      "dev": "next",
+      "build": "next build",
+      "start": "next start"
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hazim6163/SimpleCMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hazim6163/SimpleCMS/issues"
+  },
+  "homepage": "https://github.com/Hazim6163/SimpleCMS#readme",
+  "dependencies": {
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
