@@ -1,14 +1,31 @@
 import { withRouter } from 'next/router'
 import Layout from '../components/Layout.js'
+import dataSource from '../Data/Projects/projectsList.json'
 
 function Project(props) {
-    var ProjectLink = props.router.query.link;
     return (
     <Layout>
-      <h1>{ProjectLink}</h1>
-      <p>This is the Project content.</p>
-    </Layout>
+    <h1>Projects List</h1>
+    <ul>
+      {props.projects.map(project => (
+        <li key={project.link}>
+            <a>{project.name}</a>
+        </li>
+      ))}
+    </ul>
+  </Layout>
     )
 }
+
+Project.getInitialProps = async function() {
+    const data = await dataSource;
+  
+    console.log(`Show data fetched. Count: ${data.length}`);
+  
+    return {
+      projects: data.map(entry => entry.project)
+    };
+  };
+  
 
 export default withRouter(Project)
